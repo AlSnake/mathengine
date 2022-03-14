@@ -4,7 +4,7 @@ import main.java.Matrix2;
 import java.util.Arrays;
 
 public class Main {
-    public static void matrixSample() {
+    public static void matrix1Sample() {
         int row = 3;
         int col = 3;
         int[][] matrix = new int[row][col];
@@ -34,6 +34,25 @@ public class Main {
         matrix1.addRow(1, 2);
         System.out.println("");
         matrix1.printMatrix();
+
+
+		// Scaler Multiplication
+		matrix1.printMatrix();
+		matrix1.scale(3);
+		System.out.println("");
+		matrix1.printMatrix();
+
+		// Opposite
+		matrix1.printMatrix();
+		matrix1.opposite();
+		System.out.println("");
+		matrix1.printMatrix();
+
+		// Zero
+		matrix1.printMatrix();
+		matrix1.zero();
+		System.out.println("");
+		matrix1.printMatrix();
     }
 
     public static void main(String[] args) {
@@ -70,10 +89,6 @@ public class Main {
 //		Matrix1 res2 = Matrix2.subtract(matrix1, matrix2, row, col);
 //		res2.printMatrix();
 
-//		// Scaler Multiplication
-//		matrix1.printMatrix();
-//		matrix1.scale(3);
-//		System.out.println("");
-//		matrix1.printMatrix();
+
 	}
 }

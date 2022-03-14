@@ -47,6 +47,22 @@ public class Matrix1 {
 		}
 	}
 
+	public void opposite() {
+		for(int r = 0; r < row; r++) {
+			for(int c = 0; c < col; c++) {
+				data[r][c] *= -1;
+			}
+		}
+	}
+
+	public void zero() {
+		for(int r = 0; r < row; r++) {
+			for(int c = 0; c < col; c++) {
+				data[r][c] *= 0;
+			}
+		}
+	}
+
     public int[] getRow(int row) {
         return data[row-1];
     }

@@ -62,4 +62,22 @@ class Matrix1Test {
 		assertEquals(matrix.getRow(2)[1], 12);
 		assertEquals(matrix.getRow(3)[2], 24);
 	}
+
+	@org.junit.jupiter.api.Test
+	void opposite() {
+		matrix.opposite();
+		assertEquals(matrix.getRow(1)[0], 0);
+		assertEquals(matrix.getRow(1)[1], -1);
+		assertEquals(matrix.getRow(2)[1], -4);
+		assertEquals(matrix.getRow(3)[2], -8);
+	}
+
+	@org.junit.jupiter.api.Test
+	void zero() {
+		matrix.zero();
+		assertEquals(matrix.getRow(1)[0], 0);
+		assertEquals(matrix.getRow(1)[1], 0);
+		assertEquals(matrix.getRow(2)[1], 0);
+		assertEquals(matrix.getRow(3)[2], 0);
+	}
 }
