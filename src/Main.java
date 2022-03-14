@@ -54,20 +54,26 @@ public class Main {
 		Matrix1 matrix2 = new Matrix1(matrices2, row, col);
 
 
-		// ADDITION
-		matrix1.printMatrix();
-		System.out.println("+");
-		matrix2.printMatrix();
-		System.out.println("=");
-		Matrix1 res = Matrix2.add(matrix1, matrix2, row, col);
-		res.printMatrix();
+//		// ADDITION
+//		matrix1.printMatrix();
+//		System.out.println("+");
+//		matrix2.printMatrix();
+//		System.out.println("=");
+//		Matrix1 res = Matrix2.add(matrix1, matrix2, row, col);
+//		res.printMatrix();
 
-//		 SUBTRACTION
-		matrix1.printMatrix();
-		System.out.println("-");
-		matrix2.printMatrix();
-		System.out.println("=");
-		Matrix1 res2 = Matrix2.subtract(matrix1, matrix2, row, col);
-		res2.printMatrix();
+//		// SUBTRACTION
+//		matrix1.printMatrix();
+//		System.out.println("-");
+//		matrix2.printMatrix();
+//		System.out.println("=");
+//		Matrix1 res2 = Matrix2.subtract(matrix1, matrix2, row, col);
+//		res2.printMatrix();
+
+//		// Scaler Multiplication
+//		matrix1.printMatrix();
+//		matrix1.scale(3);
+//		System.out.println("");
+//		matrix1.printMatrix();
 	}
 }

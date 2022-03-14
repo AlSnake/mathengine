@@ -39,6 +39,14 @@ public class Matrix1 {
         data[row1-1] = r1;
     }
 
+	public void scale(int scaler) {
+		for(int r = 0; r < row; r++) {
+			for(int c = 0; c < col; c++) {
+				data[r][c] *= scaler;
+			}
+		}
+	}
+
     public int[] getRow(int row) {
         return data[row-1];
     }

@@ -15,17 +15,17 @@ class Matrix1Test {
         row = 3;
         col = 3;
         matrices = new int[row][col];
-
-        int j = 0;
-        for(int r = 0; r < row; r++) {
-            for(int c = 0; c < col; c++) {
-                matrices[r][c] = j++;
-            }
-        }
     }
 
     @org.junit.jupiter.api.BeforeEach
     void setupMatrix() {
+		int j = 0;
+		for(int r = 0; r < row; r++) {
+			for(int c = 0; c < col; c++) {
+				matrices[r][c] = j++;
+			}
+		}
+
         matrix = new Matrix1(matrices, row, col);
     }
 
@@ -53,4 +53,13 @@ class Matrix1Test {
         assertEquals(matrix.getRow(1)[0], tmp[0] + r2[0]);
         assertEquals(matrix.getRow(1)[1], tmp[1] + r2[1]);
     }
+
+	@org.junit.jupiter.api.Test
+	void scale() {
+		matrix.scale(3);
+		assertEquals(matrix.getRow(1)[0], 0);
+		assertEquals(matrix.getRow(1)[1], 3);
+		assertEquals(matrix.getRow(2)[1], 12);
+		assertEquals(matrix.getRow(3)[2], 24);
+	}
 }
