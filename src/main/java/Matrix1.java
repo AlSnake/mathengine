@@ -11,7 +11,19 @@ public class Matrix1 {
         this.col = col;
     }
 
-    // switch row positions (Rx <--> Ry)
+	public int[][] getData() {
+		return data;
+	}
+
+	public int getRow() {
+		return row;
+	}
+
+	public int getCol() {
+		return col;
+	}
+
+	// switch row positions (Rx <--> Ry)
     //row1 = 1, row2 = 2 (idx = 0)
     public void switchRow(int row1, int row2) {
         int tmp[] = data[row1-1]; //p to r1
@@ -63,9 +75,9 @@ public class Matrix1 {
 		}
 	}
 
-    public int[] getRow(int row) {
-        return data[row-1];
-    }
+	public int[] getARow(int row) {
+		return data[row-1];
+	}
 
     public void printMatrix() {
         for(int r = 0; r < row; r++) {

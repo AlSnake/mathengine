@@ -2,7 +2,6 @@ package test.java;
 
 import main.java.Matrix1;
 import main.java.Matrix2;
-import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -36,19 +35,26 @@ class Matrix2Test {
 		matrix2 = new Matrix1(matrices2, row, col);
 	}
 
-	@Test
+	@org.junit.jupiter.api.Test
 	void add() {
 		Matrix1 res = Matrix2.add(matrix1, matrix2, row, col);
-		assertEquals(res.getRow(1)[0], 0);
-		assertEquals(res.getRow(2)[0], 6);
-		assertEquals(res.getRow(3)[2], 16);
+		assertEquals(res.getARow(1)[0], 0);
+		assertEquals(res.getARow(2)[0], 6);
+		assertEquals(res.getARow(3)[2], 16);
 	}
 
-	@Test
+	@org.junit.jupiter.api.Test
 	void subtract() {
 		Matrix1 res = Matrix2.subtract(matrix1, matrix2, row, col);
-		assertEquals(res.getRow(1)[0], 0);
-		assertEquals(res.getRow(2)[0], 0);
-		assertEquals(res.getRow(3)[2], 0);
+		assertEquals(res.getARow(1)[0], 0);
+		assertEquals(res.getARow(2)[0], 0);
+		assertEquals(res.getARow(3)[2], 0);
+	}
+
+	@org.junit.jupiter.api.Test
+	void multiply() {
+		Matrix1 res = Matrix2.multiply(matrix1, matrix2);
+		assertEquals(res.getARow(1)[0], 15);
+		assertEquals(res.getARow(1)[1], 18);
 	}
 }

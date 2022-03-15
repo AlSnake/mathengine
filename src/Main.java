@@ -89,6 +89,12 @@ public class Main {
 //		Matrix1 res2 = Matrix2.subtract(matrix1, matrix2, row, col);
 //		res2.printMatrix();
 
-
+		// SUBTRACTION
+//		matrix1.printMatrix();
+//		System.out.println("*");
+//		matrix2.printMatrix();
+//		System.out.println("=");
+//		Matrix1 mulres = Matrix2.multiply(matrix1, matrix2);
+//		mulres.printMatrix();
 	}
 }

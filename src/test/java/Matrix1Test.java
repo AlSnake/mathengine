@@ -32,52 +32,52 @@ class Matrix1Test {
     @org.junit.jupiter.api.Test
     void switchRow() {
         matrix.switchRow(1, 2);
-        assertArrayEquals(matrix.getRow(1), matrices[1]);
-        assertArrayEquals(matrix.getRow(2), matrices[0]);
+        assertArrayEquals(matrix.getARow(1), matrices[1]);
+        assertArrayEquals(matrix.getARow(2), matrices[0]);
     }
 
     @org.junit.jupiter.api.Test
     void scaleRow() {
-        int[] old = matrix.getRow(2).clone();
+        int[] old = matrix.getARow(2).clone();
         int scaler = 2;
         matrix.scaleRow(2, scaler);
-        assertEquals(matrix.getRow(2)[0], old[0] * scaler);
-        assertEquals(matrix.getRow(2)[1], old[1] * scaler);
+        assertEquals(matrix.getARow(2)[0], old[0] * scaler);
+        assertEquals(matrix.getARow(2)[1], old[1] * scaler);
     }
 
     @org.junit.jupiter.api.Test
     void addRow() {
-        int[] tmp = matrix.getRow(1).clone();
-        int[] r2 = matrix.getRow(2);
+        int[] tmp = matrix.getARow(1).clone();
+        int[] r2 = matrix.getARow(2);
         matrix.addRow(1, 2);
-        assertEquals(matrix.getRow(1)[0], tmp[0] + r2[0]);
-        assertEquals(matrix.getRow(1)[1], tmp[1] + r2[1]);
+        assertEquals(matrix.getARow(1)[0], tmp[0] + r2[0]);
+        assertEquals(matrix.getARow(1)[1], tmp[1] + r2[1]);
     }
 
 	@org.junit.jupiter.api.Test
 	void scale() {
 		matrix.scale(3);
-		assertEquals(matrix.getRow(1)[0], 0);
-		assertEquals(matrix.getRow(1)[1], 3);
-		assertEquals(matrix.getRow(2)[1], 12);
-		assertEquals(matrix.getRow(3)[2], 24);
+		assertEquals(matrix.getARow(1)[0], 0);
+		assertEquals(matrix.getARow(1)[1], 3);
+		assertEquals(matrix.getARow(2)[1], 12);
+		assertEquals(matrix.getARow(3)[2], 24);
 	}
 
 	@org.junit.jupiter.api.Test
 	void opposite() {
 		matrix.opposite();
-		assertEquals(matrix.getRow(1)[0], 0);
-		assertEquals(matrix.getRow(1)[1], -1);
-		assertEquals(matrix.getRow(2)[1], -4);
-		assertEquals(matrix.getRow(3)[2], -8);
+		assertEquals(matrix.getARow(1)[0], 0);
+		assertEquals(matrix.getARow(1)[1], -1);
+		assertEquals(matrix.getARow(2)[1], -4);
+		assertEquals(matrix.getARow(3)[2], -8);
 	}
 
 	@org.junit.jupiter.api.Test
 	void zero() {
 		matrix.zero();
-		assertEquals(matrix.getRow(1)[0], 0);
-		assertEquals(matrix.getRow(1)[1], 0);
-		assertEquals(matrix.getRow(2)[1], 0);
-		assertEquals(matrix.getRow(3)[2], 0);
+		assertEquals(matrix.getARow(1)[0], 0);
+		assertEquals(matrix.getARow(1)[1], 0);
+		assertEquals(matrix.getARow(2)[1], 0);
+		assertEquals(matrix.getARow(3)[2], 0);
 	}
 }
