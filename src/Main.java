@@ -27,7 +27,7 @@ public class Main {
         System.out.println("");
         matrix1.printMatrix();
 
-        // scaler operation
+        // scalar operation
         matrix1.scaleRow(2, 2);
         System.out.println("");
         matrix1.printMatrix();
@@ -38,7 +38,7 @@ public class Main {
         matrix1.printMatrix();
 
 
-		// Scaler Multiplication
+		// Scalar Multiplication
 		matrix1.printMatrix();
 		matrix1.scale(3);
 		System.out.println("");

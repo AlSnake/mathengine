@@ -31,11 +31,11 @@ public class Matrix1 {
         data[row2-1] = tmp; // r2 back to r1
     }
 
-    // multiple row by scaler (S * Rx -> Rx)
-    public void scaleRow(int row, int scaler) {
+    // multiple row by scalar (S * Rx -> Rx)
+    public void scaleRow(int row, int scalar) {
         int tmp[] = data[row - 1];
         for(int i = 0; i < tmp.length; i++) {
-            tmp[i] = tmp[i] * scaler;
+            tmp[i] = tmp[i] * scalar;
         }
         data[row - 1] = tmp;
     }
@@ -51,10 +51,10 @@ public class Matrix1 {
         data[row1-1] = r1;
     }
 
-	public void scale(int scaler) {
+	public void scale(int scalar) {
 		for(int r = 0; r < row; r++) {
 			for(int c = 0; c < col; c++) {
-				data[r][c] *= scaler;
+				data[r][c] *= scalar;
 			}
 		}
 	}

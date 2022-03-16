@@ -39,10 +39,10 @@ class Matrix1Test {
     @org.junit.jupiter.api.Test
     void scaleRow() {
         int[] old = matrix.getARow(2).clone();
-        int scaler = 2;
-        matrix.scaleRow(2, scaler);
-        assertEquals(matrix.getARow(2)[0], old[0] * scaler);
-        assertEquals(matrix.getARow(2)[1], old[1] * scaler);
+        int scalar = 2;
+        matrix.scaleRow(2, scalar);
+        assertEquals(matrix.getARow(2)[0], old[0] * scalar);
+        assertEquals(matrix.getARow(2)[1], old[1] * scalar);
     }
 
     @org.junit.jupiter.api.Test
